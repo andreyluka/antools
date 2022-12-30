@@ -1,0 +1,11 @@
+mixin app-input(mod, placeholderText, btnText)
+  div(class='app-input app-input--' + mod)
+    label.app-input__label
+      if mod === 'search'
+        +icon('search', 'app-input__icon')
+      input(
+        class="app-input__input" 
+        type=mod === 'email' ? 'email' : 'text' 
+        placeholder=`${placeholderText}`
+      )
+    button(class="app-input__btn app-button app-button--orange" type="button")= btnText

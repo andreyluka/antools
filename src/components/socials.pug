@@ -1,0 +1,21 @@
+mixin socials(mod)
+  div(class='socials socials--' + mod)
+    ul.socials__list
+      - 
+        var socialItem = [
+          {
+            icon:"facebook",
+            address:"https://www.facebook.com/"
+          },{
+            icon:"instagram",
+            address:"https://instagram.com/"
+          },{
+            icon:"twitter",
+            address:"https://twitter.com/"
+          }
+        ]
+
+      each item in socialItem
+        li.socials__item
+          a.socials__link(href=`${item.address}` target="_blank")
+            +icon(`${item.icon}`, 'socials__icon')

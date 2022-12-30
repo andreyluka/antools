@@ -1,0 +1,70 @@
+section(class="popular")
+  .container
+    .popular__title-block
+      h2(class="popular__title app-title") Most Popular Tools
+      p(class="popular__text app-text") Tools for the best Designers and Developers <br/> most popularly used in the world
+    ul.popular__list
+      include tool
+      - 
+        var toolsItems = [
+          {
+            name:"FIGMA",
+            img:"figma.png",
+            payment:"Free",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:false,
+            address:"https://www.figma.com/"
+          },{
+            name:"Sketch",
+            img:"sketch.png",
+            payment:"Trial & Paid",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:'true',
+            address:"https://www.sketch.com/"
+          },{
+            name:"Visual Studio Code",
+            img:"vscode.png",
+            payment:"Free",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:false,
+            address:"https://code.visualstudio.com/"
+          },{
+            name:"Notion",
+            img:"notion.png",
+            payment:"Free & Paid",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:false,
+            address:"https://www.notion.com/"
+          },{
+            name:"Slack",
+            img:"slack.png",
+            payment:"Free & Paid",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:false,
+            address:"https://www.slack.com/"
+          },{
+            name:"Invision",
+            img:"invision.png",
+            payment:"Free & Paid",
+            desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            like:false,
+            address:"https://www.invision.com/"
+          }
+        ]
+
+      each item in toolsItems
+        li.popular__item
+          +tool(
+            `${item.name}`, 
+            `${item.img}`, 
+            `${item.payment}`, 
+            `${item.desc}`, 
+            `${item.like}`, 
+            `${item.address}`,
+            'popular'
+          )
+    .popular__load-btn
+      button(class="popular__btn app-button app-button--bordered" type="button") Load more
+
+    .popular__brands
+      include brands

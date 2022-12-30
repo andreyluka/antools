@@ -1,0 +1,25 @@
+.brands
+  .brands__container
+    h3.brands__title Trusted more than 150+ brand
+    ul.brands__list
+      - 
+        var brandItem = [
+          {
+            icon:"microsoft.png",
+            address:"https://www.microsoft.com/"
+          },{
+            icon:"google.png",
+            address:"https://google.com/"
+          },{
+            icon:"slack-brand.png",
+            address:"https://slack.com/"
+          },{
+            icon:"wordpress.png",
+            address:"https://wordpress.com/"
+          }
+        ]
+
+      each item in brandItem
+        li.brands__item
+          a.brands__link(href=`${item.address}` target="_blank")
+            +image(`content/${item.icon}`, 'brands__icon')

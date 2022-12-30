@@ -1,0 +1,54 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development --hot",
+    "build": "webpack --mode=production --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "autoprefixer": "^9.4.8",
+    "babel-loader": "^8.0.5",
+    "babel-preset-vue": "^2.0.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-advanced-variables": "^3.0.0",
+    "postcss-each": "^0.10.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.1",
+    "postcss-pxtorem": "^5.1.1",
+    "postcss-rgb": "^1.0.0",
+    "postcss-scss": "^2.0.0",
+    "postcss-svgo": "^4.0.2",
+    "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.0.0",
+    "svg-sprite-loader": "^5.0.0",
+    "svg-transform-loader": "^2.0.13",
+    "svgo-loader": "^2.2.0",
+    "terser-webpack-plugin": "^3.0.6",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "pug": "^3.0.0"
+  }
+}

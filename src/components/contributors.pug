@@ -1,0 +1,33 @@
+section(class="contributors")
+  .container
+    .contributors__slider
+      include slider
+      - 
+        var sliderArray = [
+          {
+            name:"Ronald Richards",
+            occupation:"Product Manager",
+            photo:"ronald-richards.png",
+            desc:"Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad."
+          },{
+            name:"Ronald Richards",
+            occupation:"Product Manager",
+            photo:"ronald-richards.png",
+            desc:"Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad."
+          },{
+            name:"Ronald Richards",
+            occupation:"Product Manager",
+            photo:"ronald-richards.png",
+            desc:"Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad."
+          }
+        ]
+
+      +slider(sliderArray)
+
+    .contributors__join
+      .contributors__title-block
+        h2(class="contributors__title app-title") Become a contributor?
+        p(class="contributors__text app-text") Join us and get tips & tricks to become a great <br/> Designer and Developer
+      .contributors__join-input
+        include app-input
+        +app-input('email', 'Enter your email...', 'join us')

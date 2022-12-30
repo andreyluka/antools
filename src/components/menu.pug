@@ -1,0 +1,21 @@
+nav(class='menu')
+  ul.menu__list
+    - 
+      var menuItems = [
+        {name:"home", id:"#home"},
+        {name:"categories", id:"#categories", submenu: [{name: "category-1", id:"#categor-1"},{name: "category-2 Lorem, ipsum dolor.", id:"#categor-2"}]},
+        {name:"my collections", id:"#my-collections"},
+        {name:"blog", id:"#blog"}
+      ]
+
+    each item in menuItems
+      if item.submenu
+        li(class='menu__item menu__link')= item.name
+          +icon('arrow', 'menu__item-arrow')
+          ul.menu__submenu
+            each point in item.submenu
+              li.menu__submenu-item
+                a.menu__link(href=`${point.id}`)= point.name
+      else
+        li.menu__item
+          a.menu__link(href=`${item.id}`)= item.name

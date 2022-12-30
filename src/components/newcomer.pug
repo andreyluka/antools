@@ -1,0 +1,54 @@
+section(class="newcomer")
+  .container
+    .newcomer__container
+      .newcomer__title-block
+        h2(class="newcomer__title app-title") Newcomer Tools
+        p(class="newcomer__text app-text") Wow! see the latest update of the most <br/> recommended tools from reliable designers <br/> and developers
+        .newcomer__btn
+          button(class="newcomer__btn app-button app-button--long app-button--orange" type="button") explore more
+      ul.newcomer__list
+        include tool
+        - 
+          var toolsItems = [
+            {
+              name:"Zeplin",
+              img:"zeplin.png",
+              payment:"Free & Paid",
+              desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              like:false,
+              address:"https://www.zeplin.io/"
+            },{
+              name:"PHPStprm",
+              img:"phpstorm.png",
+              payment:"Free",
+              desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              like:'true',
+              address:"https://www.jetbrains.com/phpstorm/"
+            },{
+              name:"Toolbox",
+              img:"toolbox.png",
+              payment:"Free",
+              desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              like:false,
+              address:"https://www.jetbrains.com/toolbox-app/"
+            },{
+              name:"Procreate",
+              img:"procreate.png",
+              payment:"Paid",
+              desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              like:false,
+              address:"https://www.procreate.com/"
+            }
+          ]
+
+        each item in toolsItems
+          li.newcomer__item
+            +tool(
+              `${item.name}`, 
+              `${item.img}`, 
+              `${item.payment}`, 
+              `${item.desc}`, 
+              `${item.like}`, 
+              `${item.address}`,
+              'newcomer'
+            )

@@ -1,0 +1,60 @@
+footer.footer
+  div(class="container footer__container")
+    .footer__copyright
+      .footer__logo
+        include logo
+      .footer__copyright-title Copyright 2021. Antools
+      .footer__copyright-text Antool is a web collection of information on paid or free Design and Development tools
+    ul.footer__menu
+      - 
+        var menuItems = [
+          {
+            title:"Contact Us", 
+            items: [
+              {
+                name: "+621987463", 
+                address:"tel:+621987463"
+              },{
+                name: "M Building, No.10 A", 
+                address:"#"
+              },{
+                name: "antools@awesome.com", 
+                address:"mailto:antools@awesome.com"
+              }
+            ]
+          },{
+            title:"Categories", 
+            items: [
+              {
+                name: "Design", 
+                address:"#design"
+              },{
+                name: "Development", 
+                address:"#development"
+              }
+            ]
+          },{
+            title:"Company Info", 
+            items: [
+              {
+                name: "About Us", 
+                address:"#about-us"
+              },{
+                name: "Our Partners", 
+                address:"#our-partners"
+              },{
+                name: "Blog", 
+                address:"#blog"
+              }
+            ]
+          }
+        ]
+
+      each item in menuItems
+        li.footer__menu-block
+          h6.footer__menu-name= item.title
+          ul.footer__menu-list
+            each point in item.items
+              li.footer__menu-item
+                a(class="footer__menu-link" href=`${point.address}`)= point.name
+        

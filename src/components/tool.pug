@@ -1,0 +1,20 @@
+mixin tool(name, img, payment, desc, like, address, section)
+  div(class=`tool tool--${section} tool--${name}`)
+    .tool__substrate
+      .tool__container
+        .tool__header
+          .tool__pic
+            +image(`content/${img}`, 'tool__img')
+          .tool__title
+            h4.tool__name !{name}
+            .tool__payment !{payment}
+        p.tool__desc !{desc}
+        .tool__btns
+          .tool__btns-left
+            label(class="tool__btn tool__label-like")
+              input(class="tool__like" type="checkbox" checked=like === 'true' ? true : false)
+              +icon('like-fill', 'tool__icon tool__icon-like')
+            button(class="tool__btn tool__folder-add" type="button")
+              +icon('folder-add', 'tool__icon')
+          .tool__btns-right
+            a(class=`tool__visit app-button app-button--short` href=`${address}` target="_blank") visit

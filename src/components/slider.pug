@@ -1,0 +1,22 @@
+mixin slider(sliderArray)
+  .slider
+    .slider__container 
+      button(class="slider__btn slider__btn-prev")
+        +icon('arrow', 'slider__btn-arrow')
+      button(class="slider__btn slider__btn-next")
+        +icon('arrow', 'slider__btn-arrow')
+      .slider__block
+        ul.slider__list
+          each item in sliderArray
+            li.slider__item
+              .slider__img
+                +image(`content/${item.photo}`, 'slider__pic')
+                .slider__block-name
+                  .slider__name= item.name
+                  .slider__occupation= item.occupation
+              .slider__description
+                p.slider__text= item.desc
+    ul.slider__pagination
+      li(class="slider__page")
+      li(class="slider__page slider__page--active")
+      li(class="slider__page")

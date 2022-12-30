@@ -1,0 +1,11 @@
+section(class="hero")#hero
+  .hero__pic
+    +image('content/hero.png', 'hero__img')
+  .container
+    .hero__container
+      include header
+      .hero__greeting
+        include greeting
+      .hero__socials
+        include socials
+        +socials('hero')
